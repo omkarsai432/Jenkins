@@ -17,6 +17,12 @@ pipeline {
     }
 
     stage('Testing Stage') {
+      agent {
+        docker {
+          image 'maven'
+        }
+
+      }
       steps {
         withMaven(maven: 'maven_3_5_0') {
           sh 'mvn test'
@@ -26,6 +32,12 @@ pipeline {
     }
 
     stage('Deployment Stage') {
+      agent {
+        docker {
+          image 'maven'
+        }
+
+      }
       steps {
         withMaven(maven: 'maven_3_5_0') {
           sh 'mvn deploy'
