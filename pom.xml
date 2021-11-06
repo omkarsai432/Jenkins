@@ -64,6 +64,7 @@
 
     <distributionManagement>
         <repository>
+                 <id>Jenkins</id>
             <url>https://github.com/omkarsai432/Jenkins</url>
         </repository>
     </distributionManagement>
