@@ -1,13 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'maven'
+    }
+
+  }
   stages {
     stage('Compile Stage') {
-      agent {
-        docker {
-          image 'maven'
-        }
-
-      }
       steps {
         withMaven(maven: 'maven_3_5_0') {
           sh 'mvn clean compile'
@@ -17,12 +16,6 @@ pipeline {
     }
 
     stage('Testing Stage') {
-      agent {
-        docker {
-          image 'maven'
-        }
-
-      }
       steps {
         withMaven(maven: 'maven_3_5_0') {
           sh 'mvn test'
@@ -32,12 +25,6 @@ pipeline {
     }
 
     stage('Deployment Stage') {
-      agent {
-        docker {
-          image 'maven'
-        }
-
-      }
       steps {
         withMaven(maven: 'maven_3_5_0') {
           sh 'mvn deploy'
