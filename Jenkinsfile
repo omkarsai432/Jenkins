@@ -18,7 +18,13 @@ pipeline {
       }
     }
 
-    stage('Deployment Stage') {
+    stage('Package') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+
+    stage('Deploy') {
       steps {
         sh 'mvn tomcat:deploy'
       }
