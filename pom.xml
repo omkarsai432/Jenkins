@@ -31,9 +31,9 @@
                 <artifactId>tomcat-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                     <url>http://localhost:8080/manager/text</url>
+                     <url>http://ec2-65-1-148-233.ap-south-1.compute.amazonaws.com/manager/html</url>
                      <server>TomcatServer</server>
-                     <path>/myapp</path>
+                     <path>/opt</path>
                      </configuration>
             </plugin>
             <plugin>
