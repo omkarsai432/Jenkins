@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Install') {
+      steps {
+        sh 'java -jar /root/.jenkins/workspace/Jenkins_main/target/New-1.0-SNAPSHOT.jar --server.port=9000'
+      }
+    }
+
   }
 }
