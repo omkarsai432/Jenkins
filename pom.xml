@@ -7,6 +7,7 @@
     <groupId>Test</groupId>
     <artifactId>New</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
 
     <properties>
