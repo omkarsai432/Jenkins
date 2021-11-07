@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'maven'
+    dockerfile {
+      filename 'Dockerfile'
     }
 
   }
