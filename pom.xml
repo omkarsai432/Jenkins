@@ -68,5 +68,10 @@
             <url>https://github.com/omkarsai432/Jenkins</url>
         </repository>
     </distributionManagement>
+    <server>
+         <id>TomcatServer</id>
+         <username>tomcat</username>
+         <password>tomcat</password>
+    </server>
 
 </project>
